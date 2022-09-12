@@ -1,0 +1,27 @@
+ms above should satisfy the following properties. 
+1. Completeness. For all  2 N, (x, w) 2 R,
+ 
+步 Setup(1)
+Pr Verify(步, x, ’)=1: =1. 
+’ Prove(步, x, w) 
+2. Computational soundness. For all PPT adversaries A, the following probability is negligible in : 
+
+Verify(步, x,. ’.) = 1 步 Setup(1)
+Pr : .
+^ x. 62 L (.x, ’.) A(1,步) 
+3. Zero-knowledge. There exists a PPT simulator (S1, S2) such that S1 outputs a simulated CRS  and trapdoor .; S2 takes as input 步, a statement s and ., and outputs a simulated proof ’; and, for all PPT adversaries (A1, A2), the following probability is negligible in : 
+01 
+步 Setup(1)
+@(x, w) 2 R ^ 
+Pr (x, w, st) A1(1,步)A .
+A2(’, st)=1 : 
+’ Prove(步, x, w) 
+01
+(步, .) S1(1)
+@(x, w) 2 R ^ 
+Pr (x, w, st) A1(1,步)A .
+A2(’, st)=1 : 
+’ S2(步, ., x) 
+
+
+

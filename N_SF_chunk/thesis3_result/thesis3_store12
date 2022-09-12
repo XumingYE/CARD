@@ -1,0 +1,29 @@
+, May 2000. doi:10.1007/3-540-45539-6_31. 
+[BPS16] Iddo Bentov, Rafael Pass, and Elaine Shi. Snow white: Provably secure proofs of stake. Cryptology ePrint Archive, Report 2016/919, 2016. http://eprint.iacr.org/2016/919. 
+[CCs08] Jan Camenisch, Rafk Chaabouni, and abhi shelat. E.cient protocols for set membership and range proofs. In Josef Pieprzyk, editor, ASIACRYPT 2008, volume 5350 of LNCS, pages 234每252. Springer, Heidelberg, December 2008. doi:10.1007/978-3-540-89255-7_15. 
+[CDE+16] Kyle Croman, Christian Decker, Ittay Eyal, Adem Efe Gencer, Ari Juels, Ahmed Kosba, Andrew Miller, Prateek Saxena, Elaine Shi, Emin G“un Sirer, et al. On scaling decentralized blockchains. In International Conference on Financial Cryptography and Data Security, pages 106每125. Springer, 2016. 
+[CDS94] Ronald Cramer, Ivan Damg～ard, and Berry Schoenmakers. Proofs of partial knowledge and simplifed design of witness hiding protocols. In Yvo Desmedt, editor, CRYPTO＊94, volume 839 of LNCS, pages 174每187. Springer, Heidelberg, August 1994. doi:10.1007/3-540-48658-5_19. 
+[CM99] Jan Camenisch and Markus Michels. Proving in zero-knowledge that a number is the product of two safe primes. In Jacques Stern, editor, EUROCRYPT＊99, volume 1592 of LNCS, pages 107每122. Springer, Heidelberg, May 1999. doi:10.1007/3-540-48910-X_8. 
+[CS97] Jan Camenisch and Markus Stadler. E.cient group signature schemes for large groups (extended abstract). In Burton S. Kaliski Jr., editor, CRYPTO＊97, volume 1294 of LNCS, pages 410每424. Springer, Heidelberg, August 1997. doi:10.1007/BFb0052252. 
+[Dam00] Ivan Damg～ard. E.cient concurrent zero-knowledge in the auxiliary string model. In Bart Preneel, editor, EUROCRYPT 2000, volume 1807 of LNCS, pages 418每430. Springer, Heidelberg, May 2000. doi:10.1007/3-540-45539-6_30. 
+[DGKR18] Bernardo David, Peter Gazi, Aggelos Kiayias, and Alexander Russell. Ouroboros praos: An adaptively-secure, semi-synchronous proof-of-stake blockchain. In Jesper Buus Nielsen and Vin-cent Rijmen, editors, EUROCRYPT 2018, Part II, volume 10821 of LNCS, pages 66每98. Springer, Heidelberg, April / May 2018. doi:10.1007/978-3-319-78375-8_3. 
+[FO97] Eiichiro Fujisaki and Tatsuaki Okamoto. Statistical zero knowledge protocols to prove modular polynomial relations. In Burton S. Kaliski Jr., editor, CRYPTO＊97, volume 1294 of LNCS, pages 16每30. Springer, Heidelberg, August 1997. doi:10.1007/BFb0052225. 
+[FS87] Amos Fiat and Adi Shamir. How to prove yourself: Practical solutions to identifcation and signa-ture problems. In Andrew M. Odlyzko, editor, CRYPTO＊86, volume 263 of LNCS, pages 186每194. Springer, Heidelberg, August 1987. doi:10.1007/3-540-47721-7_12. 
+[GHM+17] Yossi Gilad, Rotem Hemo, Silvio Micali, Georgios Vlachos, and Nickolai Zeldovich. Algorand: Scaling byzantine agreements for cryptocurrencies. Cryptology ePrint Archive, Report 2017/454, 2017. http://eprint.iacr.org/2017/454. 
+[JKK14] Stanislaw Jarecki, Aggelos Kiayias, and Hugo Krawczyk. Round-optimal password-protected secret sharing and T-PAKE in the password-only model. In Palash Sarkar and Tetsu Iwata, editors, ASIACRYPT 2014, Part II, volume 8874 of LNCS, pages 233每253. Springer, Heidelberg, December 2014. doi:10.1007/978-3-662-45608-8_13. 
+[KKKZ18] Thomas Kerber, Markulf Kohlweiss, Aggelos Kiayias, and Vassilis Zikas. Ouroboros crypsinous: Privacy-preserving proof-of-stake. Cryptology ePrint Archive, Report 2018/1132, 2018. To appear at IEEE Symposium on Security and Privacy -S&P 2019. URL: https://eprint.iacr.org/2018/ 
+1132. 
+[KN12] Sunny King and Scott Nadal. Ppcoin: Peer-to-peer crypto-currency with proof-of-stake. 2012. 
+[KRDO17] Aggelos Kiayias, Alexander Russell, Bernardo David, and Roman Oliynykov. Ouroboros: A prov-ably secure proof-of-stake blockchain protocol. In Jonathan Katz and Hovav Shacham, editors, CRYPTO 2017, Part I, volume 10401 of LNCS, pages 357每388. Springer, Heidelberg, August 2017. doi:10.1007/978-3-319-63688-7_12. 
+[Lin15] Yehuda Lindell. An e.cient transform from sigma protocols to NIZK with a CRS and non-programmable random oracle. In Yevgeniy Dodis and Jesper Buus Nielsen, editors, TCC 2015, Part I, volume 9014 of LNCS, pages 93每109. Springer, Heidelberg, March 2015. doi:10.1007/ 
+978-3-662-46494-6_5. 
+[MGGR13] Ian Miers, Christina Garman, Matthew Green, and Aviel D. Rubin. Zerocoin: Anonymous distributed E-cash from Bitcoin. In 2013 IEEE Symposium on Security and Privacy, pages 397每411. IEEE Computer Society Press, May 2013. doi:10.1109/SP.2013.34. 
+[Nak08] Satoshi Nakamoto. Bitcoin: A peer-to-peer electronic cash system. 2008. 
+[OM14] K. J. O＊Dwyer and D. Malone. Bitcoin mining and its energy footprint. In ISSC 2014/CIICT 2014, pages 280每285, 2014. doi:10.1049/cp.2014.0699. 
+[Ped92] Torben P. Pedersen. Non-interactive and information-theoretic secure verifable secret sharing. In Joan Feigenbaum, editor, CRYPTO＊91, volume 576 of LNCS, pages 129每140. Springer, Heidelberg, August 1992. doi:10.1007/3-540-46766-1_9. 
+[Sch91] Claus-Peter Schnorr. E.cient signature generation by smart cards. Journal of Cryptology, 4(3):161每 174, 1991. 
+
+Appendix A Private Proof of Stake Lottery 
+LE,E Com,SIG
+Theorem 1. The protocol Lottery ProtocolE,LE realizes the FLottery functionality in the (FABC, F ,
+Init FD VRF )-hybrid world in

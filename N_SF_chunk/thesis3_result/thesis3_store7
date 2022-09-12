@@ -1,0 +1,82 @@
+ality in the (FABC, F ,
+Init FD VRF )-hybrid world in the presence of a PPT adversary. 
+crs, FCom 
+Proof. Let Szk =(S1, S2) be the simulator of the zero-knowledge proof system used in the protocol 
+Lottery-ProtocolE,LE . 
+We construct a simulator Slottery and argue that the views of the adversary in the simulated execution and real protocol execution are computationally close. Here, we provide a high-level idea of simulation. The full description of the simulator Slottery can be found in Appendix A. At the beginning, the simulator
+LE,E Com,SIG
+gets the stake of dishonest stakeholders from FLottery and internally emulates the F . The simulator 
+Init generates a CRS (with trapdoor) and emulates FD VRF is emulated 
+crs. Similarly, the VRF functionality FCom by the simulator. If a dishonest stakeholder ask the VRF for an entry e 2E, the simulator frst asks 
+LE,E
+FLottery if the stakeholder wins for this entry and then samples the output accordingly. The simulation of FABC consists of two parts. First, if the adversary wants to send a message the simulator checks if the 
+0
+message is a valid tuple of the form m =(e, m, c, ’zk). If this is the case, the simulator submits (e,m) to 
+LE,E
+FLottery for publication. Second, if an honest stakeholder publishes a tuple (e,m) the simulator creates a tuple (e, m, c, ’zk) which contains a simulated proof ’zk and adds it to the message bu ers of dishonest parties. ut 
+
+4.3 Flavors of Proof-of-Stake 
+As seen above any proof-of-stake lottery can be made private. In the following we discuss how this process applies to two widely-used types of proof-of-stake lotteries. 
+Slot-based PoS. In slot-based PoS protocols (e.g., the Ouroboros Praos protocol [KRDO17]), time is divided into slots and blocks are created relative to a slot. Parties with stake can participate in a slot lottery, and winning the lottery allows a stakeholder to create a block in a particular slot. Here, the set of lottery entries are slots, i.e. E = N+. An (honest) lottery winner will publish one message in the form 
+LE,E
+of a new block via F
+Lottery. Committee-based PoS. In committee-based PoS protocols, such as Algorand [GHM+17], a stakeholder wins the right to take part in a committee which for example determines the next block. In such a protocol, the set of lottery entries could be of the form (cid, role) where cid is the id of the committee and role is the designated role of the winner. An (honest) lottery winner will then publish his messages for the committee protocol via FLE,E 
+Lottery. 
+
+4.4 Dynamic Stake 
+Our protocol in Section 4.2 assumes that the stake distribution is fxed at the onset of the computation 
+Com,SIG
+(in the form of F ), which is the static stake setting. In the following we give an intuition on how 
+Init 
+the protocol can be made to support the dynamic stake setting where the set of stakeholders and the distribution evolve over time. 
+Protocol idea. The idea is to collect information about the public keys and the corresponding stake of 
+Com,SIG
+stakeholders on the blockchain instead of using F . We assume that for each entry e the (honest) 
+Init parties agree on the corresponding stake distribution Le. This stake distribution might not be known from the beginning of the protocol3. We assume that (if defned) Le can be computed e.ciently from the blockchain. The parties then use Le in the lottery protocol when dealing with e. Observe that computation of Le is completely separated from the actual lottery protocol. The protocol therefore remains secure even in the dynamic stake setting. 
+
+4.5 Rewards 
+In many proof-of-stake based cryptocurrencies a stakeholder will include some sort of identifcation (e.g. his verifcation key) in his messages (e.g. in a new block) so that the rewards such as transaction fees are appropriately paid out. This, of course leaks the identity of the lottery winner and thus also information about his stake. This leakage can be prevented if the cryptocurrency allows for anonymous transactions and anonymous account creation. For instance, one could think of ZCash [BCG+14], which though not based on proof-of-stake allows for such mechanisms. Each stakeholder maintains a list of fresh accounts. Whenever the stakeholder needs to provide information for rewards, the stakeholder uses one of the accounts as the reward destination. Since the account was created anonymously it cannot be linked to the stakeholder. Later on, the stakeholder can anonymously transfer the money from that account to any of its other accounts. 
+
+
+5 Making Ouroboros Praos Private 
+In this section, we look at the Ouroboros Praos proof-of-stake protocol from [DGKR18], and apply the technique from our private lottery framework. In particular, we describe how the zero-knowledge proofs necessary for ’zk are instantiated for the Ouroboros Praos lottery. 
+5.1 Ouroboros Praos Leader Election 
+Recall that the VRF leader election scheme in Ouroboros Praos works as follows. The probability p that a stakeholder pid is elected as leader in a slot sl is independent of other stakeholders. It depends only on pid＊s relative stake = stk/Stake where Stake is the total stake in the system. More precisely, the probability p is given by, 
+p = ～ f () , 1 . (1 . f) 
+where f is the di.culty parameter. A stakeholder pid can evaluate the VRF using private key k along with a proof of evaluation that can be verifed using a public key. To check if they are a leader in slot sl, the stakeholder computes their threshold T =2` p where ` is the output length of the VRF. The stakeholder wins if y<T where (y, ’)= VRF(k, sl). The proof ’ allows any party to verify pid＊s claim given pid＊s verifcation key. In other words, the LE predicate function for Ouroboros Praos is given by: 
+(  
+1 . (1 . f) stk 
+Stake 
+1, if y< 2` ﹞ 
+LE(stk; y)= . 
+0, otherwise 
+Ouroboros Praos VRF. Ouroboros Praos uses the 2-Hash VRF of [JKK14] based on the hardness of the computational Di.e-Hellman problem. Let G = hgi be a group of order q. VRF uses two hash functions H1 and H2 modeled as random oracles. H1 has range {0, 1}` and H2 has range G. Given a 
+k
+key k 2 Zq, the public key is v = g , and (y, ’)= VRF(m) is given by y = H1(m, u) where u = H2(m)k, and ’ : PK{(k) : logH2(m)(u)=log (v)}.
+g 
+3 If, for example, the entries are slots (cf. Section 4.3) the stake distribution for a particular entry is only defned once the blockchain has grown far enough. 
+
+5.2 Anonymous Verifable Random Function 
+We defne a primitive that we call an anonymous VRF that captures a requirement necessary in the proof ’zk; which is roughly that verifcation should not reveal the public key. The high level idea is that there are many public keys associated with a secret key, and two dierent evaluations (on dierent messages) under the same secret key cannot be linked to a public key. The verifability property is still preserved, that is, there is a public key, which allows to verify the correctness of output with respect to a proof. We now give a formal defnition. 
+Defnition 2. A function family F(﹞)(﹞): {0, 1}k !{0, 1}`(k) is a family of anonymous VRFs, if there is a tuple of algorithms (Gen, Update, VRFprove, VRFverify) such that: Gen(1k) generates a key pair (pk, k); Update takes the public key pk and outputs an updated public key pk0; VRFprovek(pk0 ,x) outputs a tuple (Fk(x),’k(x)) where ’k(x) is the proof of correct evaluation; VRFverifypk0 (x, y, ’) verifes that y = Fk(x) using the proof ’. We require that the following properties are satisfed. 
+每 Pseudorandomness. For any pair of PPT (A1,A2), the following probability is 1/2+ negl(k). 
+0
+1
+VRFprove(﹞)
+(pk, k) Gen(1k); (Q1, x, state) A1 (pk);
+b = b0
+B@CA
+Pr y0 = Fk(x); y1 {0, 1}`; 
+VRFprove(﹞)
+(yb, state) 
+.
+^x 62 Q1 [ Q2 
+b 
+{0, 1};(Q2,b0) 
+A
+2 
+The sets Q1,Q2 contain all the queries made to the Prove oracle. The random variable state stores information that A1 can save and pass on to A2. 
+每 Uniqueness4. No PPT adversary can output values (pk, x, y1,y2,’1,’2) such that y1 =6 y2 and 
+VRFverifypk(x, y1,’1)= VRFverifypk(x, y2,’2)=1 
+每 Provability. VRFverifypk0 (x, y, ’)=1 for (y, ’)= VRFprovek(pk0 ,x), pk0 Update(pk) 
+每 Anonymity. For any PPT algorithm A, th

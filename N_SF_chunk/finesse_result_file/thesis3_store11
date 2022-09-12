@@ -1,0 +1,16 @@
+k. 
+
+
+References 
+[AGM18] Shashank Agrawal, Chaya Ganesh, and Payman Mohassel. Non-interactive zero-knowledge proofs for composite statements. In Hovav Shacham and Alexandra Boldyreva, editors, CRYPTO 2018, Part III, volume 10993 of LNCS, pages 643每673. Springer, Heidelberg, August 2018. doi:10.1007/ 
+978-3-319-96878-0_22. 
+[BBB+18] Benedikt B“unz, Jonathan Bootle, Dan Boneh, Andrew Poelstra, Pieter Wuille, and Greg Maxwell. Bulletproofs: Short proofs for confdential transactions and more. In 2018 IEEE Symposium on Security and Privacy, pages 315每334. IEEE Computer Society Press, May 2018. doi:10.1109/SP. 
+2018.00020. 
+[BCG+14] Eli Ben-Sasson, Alessandro Chiesa, Christina Garman, Matthew Green, Ian Miers, Eran Tromer, and Madars Virza. Zerocash: Decentralized anonymous payments from bitcoin. In 2014 IEEE Symposium on Security and Privacy, pages 459每474. IEEE Computer Society Press, May 2014. doi:10.1109/SP.2014.36. 
+[BFM88] Manuel Blum, Paul Feldman, and Silvio Micali. Non-interactive zero-knowledge and its applications (extended abstract). In 20th ACM STOC, pages 103每112. ACM Press, May 1988. doi:10.1145/ 
+62212.62222. 
+[BGK+18] Christian Badertscher, Peter Ga’zi, Aggelos Kiayias, Alexander Russell, and Vassilis Zikas. Ouroboros genesis: Composable proof-of-stake blockchains with dynamic availability. Cryptology ePrint Archive, Report 2018/378, 2018. https://eprint.iacr.org/2018/378. 
+[BGM16] Iddo Bentov, Ariel Gabizon, and Alex Mizrahi. Cryptocurrencies without proof of work. In Inter-national Conference on Financial Cryptography and Data Security, pages 142每157. Springer, 2016. 
+[bit11] Proof of stake instead of proof of work. https://bitcointalk.org/index.php?topic=27787.0, July 2011. 
+[BLMR14] Iddo Bentov, Charles Lee, Alex Mizrahi, and Meni Rosenfeld. proof of activity: Extending bitcoin＊s proof of work via proof of stake [extended abstract] y. ACM SIGMETRICS Performance Evaluation Review, 42(3):34每37, 2014. 
+[Bou00] Fabrice Boudot. E.cient proofs that a committed number lies in an interval. In Bart Preneel, editor, EUROCRYPT 2000, volume 1807 of LNCS, pages 431每444. Springer, Heidelberg, May 2000. doi:10.1007/3
