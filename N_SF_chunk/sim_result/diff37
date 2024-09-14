@@ -1,1 +1,0 @@
-Delete(name='delete', a1=0, a2=1415, b1=0, b2=0)Equal(name='equal', a1=1415, a2=1951, b1=0, b2=536)Delete(name='delete', a1=1951, a2=2137, b1=536, b2=536)Equal(name='equal', a1=2137, a2=8192, b1=536, b2=6591)Insert(name='insert', a1=8192, a2=8192, b1=6591, b2=8192)
